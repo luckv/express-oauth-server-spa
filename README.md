@@ -1,14 +1,14 @@
 # express-oauth-server-spa
 An ouath2 server implementation for node.js and express, working with SPAs (Single Page Applications)
-
+An example of client could be found [here](https://github.com/luckv/oauth-client-spa)
 
 Use:
 + [express-oauth-server v2.0.0](https://github.com/oauthjs/express-oauth-server)
 + [node-oauth2-server v3.0.0](https://github.com/oauthjs/node-oauth2-server)
 
-The module can to be used only in ***https connections***. All cookies created have the `secure` flag enabled, making them disappear if you use plain http.
+The module can be used only in ***https connections***. All cookies created have the `secure` flag enabled, making them disappear if you use plain http.
 
-Fully supports only the *authorization code* grant as defined in [RFC 6749 section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1). Other grant types may be added in future. Feel free to open an issue, make a pull request or email me if you want to collaborate. 
+Fully supports only the *authorization code* grant as defined in [RFC 6749 section 4.1](https://tools.ietf.org/html/rfc6749#section-4.1). Other grant types may be added in future. Feel free to open an issue, make a pull request or email me if you want to collaborate.
 
 ## module content
 
@@ -38,5 +38,3 @@ There is debug information supplied with the [debug](https://www.npmjs.com/packa
 When the user starts the authorization code flow, it is redirected to a login page, the page in `authorizationCode_loginPage_path`, where a script creates a cookie with authentication information and stores it in the cookie `oauth2_authorization_code_auth`. Then the url is reloaded, sending the cookie to the server which will use it to authenticate the user, redirect back to redirect uri and pass the authorization code in query parameters (see [RFC 6750 section 4.1.2](https://tools.ietf.org/html/rfc6749#section-4.1.2))
 
 The cookie it's an object with the field `type` to indicate the type of authentication, and additional fields with the authentication data. For now the only supported type is `user` and the additional properties are `username` and `password`. If you don't use https during authentication, all these information could be sniffed and/or edited by someone listening the network traffic!
-
-An example of login page could be it's [here]()
