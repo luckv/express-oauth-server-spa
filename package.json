@@ -1,0 +1,26 @@
+{
+  "name": "express-oauth-server-authorization-code",
+  "version": "1.0.0",
+  "description": "An implementation of the authorization code flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express-oauth2-server",
+    "oauth2-server",
+    "express",
+    "oauth"
+  ],
+  "author": "Luca Visentin",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "express-oauth-server": "2.0.0",
+    "oaut2-server": "3.0.0",
+    "bluebird": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=0.11"
+  }
+}
