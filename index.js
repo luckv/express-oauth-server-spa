@@ -8,7 +8,7 @@ var URL = require('url').URL;
 var qs = require('qs');
 var httpsRequest = require('https').request;
 var debug = require('debug');
-var debugConsole = debug('express-oauth2-server-authorization-code');
+var debugConsole = debug('express-oauth-server-spa');
 
 var authorizationFlow_debug = debugConsole.extend('authorization-flow');
 var sessionAuthenticate_debug = debugConsole.extend('session-authenticate-middleware');
